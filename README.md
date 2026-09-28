@@ -2,6 +2,10 @@
 
 Template 04: a reusable freelance website template for a fictional premium **unisex** salon. Six completed core pages combine editorial imagery with useful service, artist and appointment-enquiry tools.
 
+## Live Demo
+
+[View Live Demo](https://velora-beauty-salon-template.vercel.app/)
+
 ## Stack and local setup
 
 React 19, Vite 8, React Router 7 and custom CSS. Oxlint and Node's built-in test runner provide checks. No UI framework, remote fonts or backend.
