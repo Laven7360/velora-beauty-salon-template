@@ -1,0 +1,224 @@
+﻿/* Stage 2 Home only. The approved hero, shared layout and global tokens are unchanged. */
+.home-section { padding-block: var(--section-space); }
+.home-section h2 { font-size: clamp(2.2rem, 3.7vw, 4rem); line-height: 1.08; letter-spacing: -.045em; }
+.home-section h2 em { font-weight: 400; color: var(--color-clay); }
+.home-section h3 { font-size: 1.4rem; letter-spacing: -.025em; line-height: 1.2; }
+.home-section .utility { margin-bottom: 1rem; color: var(--color-muted); }
+.home-description { font-size: clamp(.95rem, 1.15vw, 1.05rem); line-height: 1.85; color: var(--color-muted); max-width: 30rem; }
+.home-small { font-size: .78rem; line-height: 1.7; color: var(--color-muted); }
+.home-section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; margin-bottom: 2.5rem; }
+.home-section-heading > .home-description { max-width: 24rem; }
+.home-section-heading > .text-link { flex-shrink: 0; }
+.section-end { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 2rem; }
+.demo-note { margin-top: 1.25rem; }
+.feature-copy .home-description { margin-top: 1.5rem; }
+.feature-copy > .text-link { margin-top: 1.75rem; }
+.demo-photo { position: relative; overflow: hidden; aspect-ratio: 2 / 3; min-width: 0; background: var(--color-stone); }
+.demo-photo > svg, .demo-photo > img { display: block; width: 100%; height: 100%; object-fit: cover; overflow: hidden; transition: transform 650ms ease; }
+@media (hover: hover) { .artist:hover .demo-photo > svg, .gallery-tile:hover .demo-photo > svg { transform: scale(1.025); } }
+
+/* An offset introduction, without another image or ornamental motif. */
+.home-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 0 8%; align-items: start; }
+.home-intro > .utility { grid-column: 1 / -1; }
+.home-intro h2 { font-size: clamp(2.4rem, 4.1vw, 4.25rem); }
+.home-intro > div { padding-top: .4rem; max-width: 30rem; }
+.home-intro .text-link { margin-top: 1.25rem; }
+
+/* Editorial menu: native buttons keep the image preview usable on touch and keyboard. */
+.home-services { background: var(--color-paper); }
+.service-menu-layout { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, .8fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.service-menu { border-top: 1px solid #c3b4a6; }
+.service-row { width: 100%; display: flex; align-items: center; text-align: left; gap: 1.25rem; color: var(--color-ink); background: transparent; border: 0; border-bottom: 1px solid #c3b4a6; padding: 1.1rem .5rem; transition: background-color var(--transition), color var(--transition); }
+.service-row:hover, .service-row[aria-pressed="true"] { background: #e0d5c9; }
+.service-row:focus-visible { outline-offset: -3px; }
+.service-number { font-size: .6rem; align-self: flex-start; padding-top: .55rem; color: var(--color-muted); }
+.service-row-copy { display: flex; flex: 1; flex-direction: column; gap: .35rem; min-width: 0; }
+.service-name { font-family: var(--font-display); font-size: clamp(1.65rem, 2.5vw, 2.4rem); letter-spacing: -.03em; line-height: 1.15; }
+.service-description { font-size: .88rem; color: #685a50; line-height: 1.6; max-width: 29rem; }
+.service-indicator { font-size: 1.3rem; color: var(--color-clay); }
+.service-visual { margin-top: 2rem; }
+.service-visual .demo-photo { aspect-ratio: 3 / 4; }
+.service-visual figcaption { display: flex; flex-direction: column; gap: .5rem; font-size: .82rem; margin-top: 1rem; }
+
+/* Colour is the page's expressive moment. Photos overlap each other, never text. */
+.colour-feature { background: var(--color-clay); color: #fff; }
+.colour-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+.colour-images { position: relative; padding: 0 18% 3rem 0; }
+.colour-main .demo-photo { aspect-ratio: 3 / 4; }
+.colour-inset { position: absolute; width: 40%; right: 0; bottom: 0; padding: .5rem; background: var(--color-ivory); color: var(--color-ink); }
+.colour-inset .demo-photo { aspect-ratio: 3 / 4; }
+.colour-images figcaption { font-size: .75rem; margin-top: .5rem; }
+.colour-feature .utility, .colour-feature .home-description, .colour-feature .home-small { color: #fff; }
+.colour-feature h2 em { color: #f2d1bc; }
+.colour-techniques { margin-top: 1.5rem; font-size: .82rem; line-height: 2; max-width: 24rem; }
+.colour-feature .text-link:hover { color: #f3d3bf; }
+.colour-feature :focus-visible { outline-color: var(--color-ivory); }
+.colour-feature .home-small { margin-top: 1.25rem; }
+
+/* Quiet treatment and product features follow the stronger colour spread. */
+.hair-health { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 9vw, 9rem); align-items: center; }
+.health-image { max-width: 27rem; width: 100%; }
+.health-image .demo-photo { aspect-ratio: 1; border-radius: 45% 45% 0 0; }
+.health-image > span { display: block; margin-top: .65rem; }
+.treatment-list { margin-top: 1.25rem; }
+.treatment-list li { padding-block: .6rem; border-bottom: var(--border); font-size: .88rem; max-width: 28rem; }
+.hair-care-feature { background: #ede3da; }
+.care-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 5%; align-items: center; }
+.care-needs { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin-top: 1.5rem; max-width: 29rem; }
+.care-needs li { font-size: .82rem; padding-block: .25rem; border-bottom: 1px solid #cdb7a4; }
+.product-display { min-width: 0; }
+.product-plinth { height: clamp(20rem, 33vw, 32rem); background: #dcd0c1; border-radius: 45% 45% 0 0; display: flex; align-items: flex-end; justify-content: center; gap: 5%; padding: 15% 8% 12%; border-bottom: 1.5rem solid #c3b19d; }
+.product-bottle, .product-jar { position: relative; flex-shrink: 0; box-shadow: 9px 12px 12px #4932261a, inset -6px 0 0 #00000008; }
+.product-bottle { width: 31%; height: 87%; border-radius: 12px 12px 4px 4px; display: flex; justify-content: center; align-items: center; }
+.product-wash { background: #f6f1e8; color: var(--color-ink); }
+.bottle-cap { position: absolute; top: -9%; left: 20%; right: 20%; height: 10%; background: var(--color-ink); border-radius: 2px 2px 0 0; }
+.product-cream { background: var(--color-clay); color: white; height: 68%; }
+.product-cream .bottle-cap { background: #85412f; }
+.product-label { width: 86%; text-align: center; display: flex; flex-direction: column; gap: 1.3rem; }
+.product-label strong { font-family: var(--font-display); font-size: clamp(.9rem, 1.6vw, 1.5rem); font-weight: 400; letter-spacing: -.07em; }
+.product-label > span { font-size: clamp(.42rem, .6vw, .6rem); letter-spacing: .07em; line-height: 1.7; }
+.product-label small { font-size: clamp(.3rem, .45vw, .45rem); letter-spacing: .02em; }
+.product-jar { width: 27%; height: 28%; background: #b1aa98; color: var(--color-ink); border-radius: 3px 3px 8px 8px; display: grid; place-items: center; }
+.jar-lid { position: absolute; height: 18%; left: -2%; right: -2%; top: -5%; background: #777466; border-radius: 3px; }
+.product-jar .product-label { gap: .6rem; padding-top: .3rem; }
+.product-display figcaption { margin-top: .8rem; font-size: .75rem; color: var(--color-muted); }
+
+/* Portraits sit directly on the page, with no employee-card chrome. */
+.artist-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; align-items: start; }
+.artist:nth-child(2) { padding-top: 2.5rem; }
+.artist .demo-photo { aspect-ratio: 3 / 4; }
+.artist-caption { padding-top: 1rem; }
+.artist-role { font-size: .85rem; color: var(--color-muted); margin: .4rem 0; }
+.experience-section { background: var(--color-paper); }
+.experience-steps { list-style: none; padding: 0; margin: 3rem 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.experience-steps li { border-top: 1px solid #b6a595; padding: 1.25rem 2rem 0 0; }
+.step-index { font-size: .78rem; color: var(--color-clay); }
+.experience-steps h3 { margin-top: 1.25rem; font-size: 1.45rem; }
+.experience-steps p { font-size: .88rem; color: var(--color-muted); margin-top: .75rem; max-width: 18rem; }
+.testimonial-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3rem; }
+.testimonial-grid figure { border-top: var(--border); padding-top: 1.75rem; }
+.testimonial-grid blockquote { margin: 0; font-family: var(--font-display); font-size: clamp(1.3rem, 1.7vw, 1.75rem); line-height: 1.45; letter-spacing: -.02em; }
+.testimonial-grid figcaption { margin-top: 1.5rem; font-size: .75rem; }
+.testimonial-grid figcaption span { display: block; font-size: .75rem; color: var(--color-muted); margin-top: .3rem; }
+
+/* Unequal gallery rhythm, rearranged into a compact two-column edit on mobile. */
+.home-gallery { background: var(--color-paper); }
+.gallery-mosaic { display: grid; grid-template-columns: 1fr 1.15fr .85fr; gap: 2rem 1.5rem; align-items: start; }
+.gallery-tile .demo-photo { aspect-ratio: 4 / 5; }
+.gallery-tile-1 { padding-top: 3rem; }
+.gallery-tile-1 .demo-photo { aspect-ratio: 3 / 4; }
+.gallery-tile-2 .demo-photo { aspect-ratio: 1; }
+.gallery-tile-3 .demo-photo { aspect-ratio: 1.2; }
+.gallery-tile-4 { margin-top: 1rem; }
+.gallery-tile-4 .demo-photo { aspect-ratio: 1; }
+.gallery-tile-5 { margin-top: -2rem; }
+.gallery-tile-5 .demo-photo { aspect-ratio: 3 / 4; }
+.gallery-tile figcaption { font-size: .78rem; margin-top: .65rem; }
+.final-booking { background: var(--color-blush); }
+.final-booking-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 10%; align-items: center; }
+.final-booking .utility, .final-booking .home-small { color: #624b41; }
+.final-booking h2 em { color: var(--color-ink); }
+.final-booking .booking-link { margin-top: 1.75rem; background: var(--color-ink); }
+.final-booking .booking-link:hover { background: #54392c; }
+.final-booking .home-small { margin-top: 1rem; }
+.booking-practical { padding-left: 2rem; border-left: 1px solid #b98f7f; max-width: 29rem; }
+.booking-practical > p, .booking-practical address { font-size: .9rem; line-height: 1.8; margin-top: 1rem; font-style: normal; }
+.booking-practical dl { font-size: .85rem; margin: 1rem 0 0; max-width: 20rem; }
+.booking-practical dl > div { display: flex; justify-content: space-between; gap: 1rem; }
+.booking-practical dd { margin: 0; }
+
+@media (max-width: 63rem) {
+  .home-section-heading { align-items: flex-start; }
+  .home-section-heading > .home-description { max-width: 20rem; }
+  .service-menu-layout { gap: 2rem; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); }
+  .service-visual { position: sticky; top: 2rem; }
+  .service-description { font-size: .85rem; }
+  .artist-grid { gap: 1.25rem; }
+  .experience-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+  .testimonial-grid { gap: 1.5rem; }
+  .colour-layout, .care-layout { gap: 2rem; }
+  .product-label { gap: .8rem; }
+}
+@media (max-width: 47.999rem) {
+  .home-section-heading { flex-direction: column; gap: 1.25rem; margin-bottom: 2rem; }
+  .home-section-heading > .home-description { max-width: 30rem; }
+  .home-intro { grid-template-columns: 1fr; gap: 1.25rem; }
+  .home-intro > .utility { margin-bottom: 0; }
+  .home-intro > div { max-width: none; }
+  .home-intro .home-description { max-width: 34rem; }
+  .service-menu-layout { display: flex; flex-direction: column; }
+  .service-menu { width: 100%; }
+  .service-row { padding-block: 1rem; gap: 1rem; }
+  .service-name { font-size: 1.8rem; }
+  .service-description { font-size: .85rem; }
+  .service-visual { position: static; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); gap: 1.25rem; margin: 0; width: 100%; align-items: center; }
+  .service-visual .demo-photo { aspect-ratio: 1; }
+  .service-visual figcaption { margin: 0; }
+  .section-end { align-items: flex-start; flex-direction: column; }
+  .colour-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .colour-images { max-width: 32rem; width: 100%; padding-bottom: 2rem; }
+  .colour-main .demo-photo { aspect-ratio: 1; }
+  .colour-inset { width: 35%; }
+  .hair-health { grid-template-columns: minmax(0, .6fr) minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+  .health-image { margin-top: 2rem; }
+  .health-image .demo-photo { aspect-ratio: 2 / 3; }
+  .hair-health h2 { font-size: clamp(1.8rem, 5vw, 2.7rem); }
+  .hair-health .home-description { font-size: .88rem; }
+  .care-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .product-display { width: 100%; max-width: 34rem; margin-inline: auto; }
+  .product-plinth { height: 25rem; }
+  .product-label strong { font-size: 1.2rem; }
+  .product-label > span { font-size: .55rem; }
+  .product-label small { font-size: .4rem; }
+  .artist-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .artist { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.25rem; align-items: center; }
+  .artist:nth-child(2) { padding: 0; }
+  .artist:nth-child(2) .demo-photo { grid-column: 2; grid-row: 1; }
+  .artist:nth-child(2) .artist-caption { grid-column: 1; grid-row: 1; }
+  .artist-caption { padding: 0; }
+  .artist h3 { font-size: 1.5rem; }
+  .experience-steps { margin-top: 2rem; gap: 2rem 1.25rem; }
+  .experience-steps li { padding-right: 0; }
+  .experience-steps h3 { font-size: 1.3rem; margin-top: .75rem; }
+  .testimonial-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .testimonial-grid figure { display: grid; grid-template-columns: 1fr .4fr; gap: 1.25rem; padding-top: 1.25rem; }
+  .testimonial-grid blockquote { font-size: 1.35rem; }
+  .testimonial-grid figcaption { margin-top: .2rem; }
+  .gallery-mosaic { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem 1rem; }
+  .gallery-tile { margin: 0; padding: 0; }
+  .gallery-tile-1, .gallery-tile-3, .gallery-tile-5 { padding-top: 1.5rem; }
+  .gallery-tile-0 .demo-photo, .gallery-tile-4 .demo-photo { aspect-ratio: 1; }
+  .gallery-tile-3 .demo-photo { aspect-ratio: 4 / 5; }
+  .gallery-tile-5 .demo-photo { aspect-ratio: 1; }
+  .final-booking-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .booking-practical { max-width: none; border-left: 0; border-top: 1px solid #b98f7f; padding: 1.5rem 0 0; }
+}
+@media (max-width: 25rem) {
+  .hair-health { grid-template-columns: 1fr; }
+  .health-image { grid-row: 2; margin-top: 0; width: 65%; justify-self: end; }
+  .health-image .demo-photo { aspect-ratio: 1; }
+  .hair-health h2 { font-size: 2.2rem; }
+  .product-plinth { height: 20rem; padding-inline: 6%; }
+  .product-label { gap: .65rem; }
+  .product-label strong { font-size: .9rem; }
+  .product-label > span { font-size: .44rem; }
+  .product-label small { font-size: .32rem; }
+  .artist { gap: 1rem; }
+  .artist h3 { font-size: 1.3rem; }
+  .artist-role { font-size: .82rem; }
+  .testimonial-grid figure { grid-template-columns: 1fr; gap: .75rem; }
+}
+
+
+/* Final Home polish: keep expressive spreads generous; trim quiet transitions. */
+.home-intro, .hair-health, .testimonials-section { padding-block: clamp(2.75rem, 4.5vw, 4.5rem); }
+.home-section .text-link, .home-section .booking-link { font-size: .85rem; }
+.home-section .text-link { gap: 1.25rem; }
+.home-section > *, .home-section .container > * { min-width: 0; }
+.gallery-mosaic { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, .85fr); }
+@media (max-width: 47.999rem) {
+  .gallery-mosaic { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .colour-main .demo-photo { aspect-ratio: 3 / 4; }
+  .colour-inset { width: 37%; }
+  .booking-practical dl { max-width: 23rem; }
+}

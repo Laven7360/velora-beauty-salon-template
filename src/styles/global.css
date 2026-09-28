@@ -1,0 +1,36 @@
+﻿@import './tokens.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+html { color-scheme: light; scroll-behavior: smooth; }
+body { margin: 0; background: var(--color-ivory); color: var(--color-ink); font-family: var(--font-body); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+#root { min-height: 100svh; display: flex; flex-direction: column; }
+main { flex: 1; min-width: 0; }
+h1, h2, h3, p, figure { margin: 0; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.08; }
+h1 { font-size: clamp(2.75rem, 4.5vw, 4.75rem); letter-spacing: -.045em; text-wrap: balance; }
+h1 em { font-weight: 400; }
+p { text-wrap: pretty; }
+a { color: inherit; text-decoration: none; transition: color var(--transition), background-color var(--transition), border-color var(--transition); }
+button { font: inherit; cursor: pointer; }
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+ul { margin: 0; padding: 0; list-style: none; }
+::selection { background: var(--color-blush); color: var(--color-ink); }
+:focus-visible { outline: 2px solid var(--color-clay); outline-offset: 5px; }
+.container { width: min(calc(100% - var(--gutter) * 2), var(--container)); margin-inline: auto; }
+.utility { font-size: .66rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 500; line-height: 1.6; }
+.intro-copy { max-width: 29rem; color: var(--color-muted); font-size: clamp(.95rem, 1.2vw, 1.05rem); line-height: 1.8; }
+.text-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 2.75rem; padding-block: .45rem; border-bottom: 1px solid currentColor; font-size: .8rem; }
+.text-link span, .booking-link span { font-size: 1.15rem; transition: transform var(--transition); }
+.text-link:hover span, .booking-link:hover span { transform: translate(2px, -2px); }
+.text-link:hover { color: #8c422f; }
+.booking-link { display: inline-flex; align-items: center; justify-content: center; gap: 1rem; min-height: 3.1rem; padding: .8rem 1.4rem; border: 1px solid transparent; border-radius: 3rem; background: var(--color-clay); color: white; font-size: .8rem; line-height: 1.4; }
+.booking-link:hover { background: #8c422f; }
+.page-note { font-size: .75rem; line-height: 1.7; margin-top: 1.25rem; color: var(--color-muted); max-width: 29rem; }
+.skip-link { position: fixed; top: -8rem; left: 1rem; z-index: 20; padding: .8rem 1.2rem; background: var(--color-ink); color: white; }
+.skip-link:focus { top: 1rem; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+

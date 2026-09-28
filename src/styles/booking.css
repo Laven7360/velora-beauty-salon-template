@@ -1,0 +1,98 @@
+.enquiry-container { width: min(calc(100% - var(--gutter) * 2), 76rem); margin-inline: auto; }
+.enquiry-hero { padding-block: 3rem; max-width: 46rem; }
+.enquiry-page .utility { color: var(--color-muted); margin-bottom: 1rem; }
+.enquiry-copy { color: var(--color-muted); max-width: 38rem; font-size: .95rem; line-height: 1.85; margin-top: 1.25rem; }
+.enquiry-demo-notice { border-left: 2px solid var(--color-clay); padding-left: 1rem; margin-top: 1.5rem; font-size: .8rem; color: var(--color-muted); }
+.enquiry-demo-notice strong { color: var(--color-ink); font-weight: 500; }
+.enquiry-note { font-size: .75rem; line-height: 1.8; color: var(--color-muted); }
+.enquiry-progress { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); list-style: none; padding: 0; margin: 0 0 3rem; border-block: var(--border); }
+.enquiry-progress li { padding: 1rem .5rem; font-size: .72rem; color: var(--color-muted); border-bottom: 2px solid transparent; }
+.enquiry-progress li > span:first-child { display: block; font-size: .65rem; margin-bottom: .4rem; }
+.enquiry-progress [aria-current="step"] { color: var(--color-ink); border-bottom-color: var(--color-clay); font-weight: 600; }
+.enquiry-progress .is-complete { color: var(--color-ink); }
+.enquiry-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(14rem, .4fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; padding-bottom: 4rem; }
+.enquiry-page h2 { font-size: clamp(2rem, 3.2vw, 3rem); letter-spacing: -.03em; }
+.enquiry-step { margin-top: 2rem; }
+.enquiry-field { margin-bottom: 1.5rem; min-width: 0; }
+.enquiry-field label { display: block; font-size: .85rem; margin-bottom: .5rem; }
+.enquiry-field label span { color: var(--color-muted); font-size: .75rem; }
+.enquiry-field input, .enquiry-field select, .enquiry-field textarea { display: block; width: 100%; min-width: 0; max-width: 100%; border: 1px solid #927e73; border-radius: 0; background: #fcf8f4; color: var(--color-ink); padding: .85rem .8rem; font: 1rem var(--font-body); line-height: 1.5; }
+.enquiry-field input, .enquiry-field select { min-height: 3.1rem; }
+.enquiry-field textarea { resize: vertical; }
+.enquiry-page input[type="radio"] { accent-color: var(--color-clay); width: 1.1rem; height: 1.1rem; flex-shrink: 0; margin: .2rem .2rem 0 0; }
+.enquiry-page fieldset { min-width: 0; padding: 0; border: 0; margin: 0 0 1.5rem; }
+.enquiry-page legend { padding: 0; font-size: .85rem; margin-bottom: .75rem; }
+.enquiry-choices > div { display: flex; flex-wrap: wrap; gap: .6rem; }
+.enquiry-choices label { display: inline-flex; align-items: center; gap: .5rem; border: var(--border); padding: .7rem .9rem; min-height: 2.75rem; font-size: .8rem; cursor: pointer; }
+.enquiry-page label:has(input:checked) { border-color: var(--color-clay); background: #ead7cd; }
+.enquiry-choices label:has(input:checked) span { text-decoration: underline; text-underline-offset: .25rem; }
+.enquiry-service-options > label { display: grid; grid-template-columns: 1.25rem minmax(0, 1fr) minmax(4.5rem, .28fr); gap: .75rem; align-items: start; border-top: var(--border); padding: 1rem .5rem; cursor: pointer; }
+.enquiry-service-options > label:last-of-type { border-bottom: var(--border); }
+.enquiry-service-options strong { display: block; font-weight: 500; font-size: .9rem; }
+.enquiry-service-options label > span > span { display: block; font-size: .77rem; line-height: 1.7; color: var(--color-muted); margin-top: .35rem; }
+.enquiry-price { text-align: right; font-size: .77rem; }
+.enquiry-help { font-size: .85rem; line-height: 1.8; color: var(--color-muted); margin-block: 0 1.5rem; }
+.enquiry-service-options + .enquiry-note { margin-bottom: 1rem; }
+.enquiry-text-button { border: 0; border-bottom: 1px solid currentColor; padding: .45rem 0; min-height: 2.75rem; background: transparent; font-size: .8rem; color: var(--color-ink); text-align: left; }
+.enquiry-text-button:hover { color: var(--color-clay); }
+.enquiry-artists > label { display: grid; grid-template-columns: 1.25rem 4.5rem minmax(0, 1fr); gap: .75rem; border: var(--border); padding: 1rem; margin-bottom: .75rem; cursor: pointer; }
+.enquiry-artists .artist-portrait { width: 100%; aspect-ratio: 2 / 3; }
+.enquiry-artists .artist-portrait svg { height: 100%; width: 100%; }
+.enquiry-artists strong { display: block; font-size: .9rem; font-weight: 500; }
+.enquiry-artists small { display: block; font-size: .75rem; color: var(--color-muted); line-height: 1.7; margin-top: .25rem; }
+.enquiry-artists em { display: block; font-style: normal; font-size: .73rem; margin-top: .6rem; text-decoration: underline; text-underline-offset: .2rem; }
+.enquiry-artists > .enquiry-no-artist { grid-template-columns: 1.25rem minmax(0, 1fr); }
+.enquiry-inspiration { display: flex; gap: 1.25rem; align-items: center; padding: 1rem 0; margin-bottom: 1.5rem; border-block: var(--border); }
+.enquiry-reference { width: 5rem; flex: 0 0 5rem; }
+.enquiry-reference img, .enquiry-reference .style-portrait { aspect-ratio: 2 / 3; width: 100%; height: auto; }
+.enquiry-reference .style-portrait svg { width: 100%; height: 100%; }
+.enquiry-inspiration .utility { font-size: .65rem; margin-bottom: .25rem; }
+.enquiry-inspiration p { font-size: .85rem; }
+.enquiry-inspiration .enquiry-note { font-size: .72rem; }
+.enquiry-contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 1.25rem; }
+.enquiry-contact-grid > :first-child { grid-column: 1 / -1; }
+.enquiry-error, .enquiry-error-summary { font-size: .8rem; color: #8c3428; line-height: 1.7; margin-top: .5rem; }
+.enquiry-error-summary { border-left: 2px solid #8c3428; padding-left: .75rem; margin-top: 1.5rem; }
+.enquiry-field [aria-invalid="true"] { border-color: #8c3428; border-width: 2px; }
+.enquiry-navigation { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 1rem; margin-block: 2rem 1rem; align-items: center; }
+.enquiry-back { background: none; border: 0; color: var(--color-ink); min-height: 2.75rem; padding: .6rem .2rem; font-size: .85rem; margin-right: auto; }
+.enquiry-summary { position: sticky; top: 2rem; border-top: 2px solid var(--color-clay); padding-top: 1.25rem; }
+.enquiry-page .enquiry-summary h2 { font-size: 1.9rem; }
+.enquiry-summary dl { margin-block: 1.5rem; }
+.enquiry-summary dl > div { padding-block: .8rem; border-bottom: var(--border); }
+.enquiry-summary dt { font-size: .7rem; color: var(--color-muted); margin-bottom: .3rem; }
+.enquiry-summary dd { margin: 0; font-size: .83rem; }
+.enquiry-summary dd span { display: block; font-size: .75rem; color: var(--color-muted); }
+.enquiry-review { margin: 0; overflow-wrap: anywhere; }
+.enquiry-review > div { border-top: var(--border); padding-block: 1rem; }
+.enquiry-review dt { display: flex; align-items: center; justify-content: space-between; gap: 1rem; font-size: .78rem; color: var(--color-muted); }
+.enquiry-review dd { margin: .5rem 0 0; font-size: .95rem; }
+.enquiry-review small { display: block; font-size: .8rem; line-height: 1.8; color: var(--color-muted); margin-top: .25rem; white-space: pre-wrap; }
+.enquiry-review .enquiry-inspiration { margin: .75rem 0 0; border: 0; padding: 0; }
+.enquiry-complete { max-width: 47rem; padding-bottom: 4rem; }
+.enquiry-complete .enquiry-review { margin-top: 2rem; }
+.enquiry-complete-actions { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; margin-top: 2rem; }
+.enquiry-practical { padding-block: 3rem 4rem; border-top: var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.enquiry-practical h2 { font-size: 2rem; margin-bottom: 1rem; }
+.enquiry-practical p:not(.utility) { font-size: .85rem; color: var(--color-muted); line-height: 1.85; }
+.enquiry-practical .enquiry-note { margin-top: 1rem; }
+@media (max-width: 63rem) { .enquiry-layout { grid-template-columns: minmax(0, 1fr) 14rem; gap: 2rem; } }
+@media (max-width: 47.999rem) {
+  .enquiry-hero { padding-top: 2rem; }
+  .enquiry-layout { grid-template-columns: minmax(0, 1fr); }
+  .enquiry-summary { display: none; }
+  .enquiry-progress { margin-bottom: 2rem; gap: 0; }
+  .enquiry-progress li { font-size: 0; text-align: center; padding: .6rem .25rem; }
+  .enquiry-progress li > span:first-child { font-size: .8rem; margin: 0; }
+  .enquiry-progress li .progress-done { display: none; }
+  .enquiry-progress [aria-current="step"] > span:first-child { text-decoration: underline; text-underline-offset: .25rem; }
+  .enquiry-practical { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+@media (max-width: 25rem) {
+  .enquiry-contact-grid { grid-template-columns: minmax(0, 1fr); }
+  .enquiry-artists > label { grid-template-columns: 1rem 3.5rem minmax(0, 1fr); gap: .5rem; padding: .75rem; }
+  .enquiry-service-options > label { grid-template-columns: 1.1rem minmax(0, 1fr); }
+  .enquiry-price { grid-column: 2; text-align: left; }
+  .enquiry-navigation .booking-link { max-width: 100%; }
+}
+

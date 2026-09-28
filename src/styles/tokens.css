@@ -1,0 +1,28 @@
+﻿:root {
+  --color-ivory: #f6f1eb;
+  --color-paper: #e9e1d8;
+  --color-ink: #2c1e1b;
+  --color-muted: #716059;
+  --color-clay: #ae5540;
+  --color-blush: #e2b5a8;
+  --color-stone: #b4ada0;
+  --color-gold: #c8ad7e;
+  --color-line: #d3c4ba;
+  --color-footer: #2c1e1b;
+  --font-display: 'Bodoni MT', Didot, 'Times New Roman', serif;
+  --font-body: 'Helvetica Neue', Arial, sans-serif;
+  --font-impact: Impact, 'Arial Narrow', 'Helvetica Neue', sans-serif;
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --space-7: 6rem;
+  --container: 88rem;
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+  --section-space: clamp(3rem, 6vw, 6rem);
+  --border: 1px solid var(--color-line);
+  --transition: 220ms ease;
+}
+
